@@ -19,5 +19,5 @@ HTTP Model-as-a-Service is freely distributable under the terms of the [MIT lice
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
 
-[travis-url]: http://travis-ci.org/nickckaye/geb-mu
-[travis-image]: http://img.shields.io/travis/nickckaye/geb-mu/master.svg?style=flat
+[travis-url]: http://travis-ci.org/nickckaye/geb-theorem
+[travis-image]: http://img.shields.io/travis/nickckaye/geb-theorem/master.svg?style=flat
