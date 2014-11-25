@@ -6,7 +6,49 @@ Author: [Nick C. Kaye](http://www.nickkaye.com)
 
 ## Documentation
 
-TODO: Write This
+### TheoremSeeker
+
+Utilizes a TheoremProducer to perform maths and seek new Theorem.
+
+    @property {number} total_iterations
+    @property {number} max_content_length
+    @property {Array|String} start_with_axiom
+    @property {string} search_for_content:
+    
+Configure, Run, Report:
+
+    var seeker = new TheoremSeeker({...});
+    seeker.run();
+    seeker.report();
+
+### TheoremProducer
+
+Produces Theorem, storing all of them in a set.
+
+    @property {TheoremSet} _set
+
+### TheoremSet
+
+Stores many Theorem, referenced by their _id.
+
+    @property {Object} contents
+
+### TheoremRule
+
+Rule of production of one Theorem from another.
+
+    @property {Function} produce()
+    @property {Function} each_variant()
+
+### Theorem
+
+One Theorem- a mutation of an axiom or another theorem.
+
+    @property {number} _id
+    @property {number} _level
+    @property {String} content
+    @property {number} rule_name
+    @property {number} rule_variant
 
 ### Basic Usage
 
