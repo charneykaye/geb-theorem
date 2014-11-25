@@ -3,7 +3,8 @@
  * @laboratory Outright Mental Inc.
  */
 'use strict';
-var TheoremSeeker = require('./lib/theorem/theorem.seeker')
+var Util = require('./lib/etc/util')
+  , TheoremSeeker = require('./lib/theorem/theorem.seeker')
   , TheoremRule = require('./lib/theorem/theorem.rule')
   ;
 
@@ -13,10 +14,10 @@ var TheoremSeeker = require('./lib/theorem/theorem.seeker')
 var seeker = new TheoremSeeker({
 
   // # of waves of mutations to simulate
-  total_iterations: 10,
+  total_iterations: 15,
 
   // stop mutating any strings past this length
-  max_content_length: 10,
+  max_content_length: 15,
 
   // initial content
   start_with_axiom: ['MI'],
@@ -57,9 +58,8 @@ var seeker = new TheoremSeeker({
       each: function (from, produce) {
         produce(from, 0);
       }
-    })
+    }),
 
-    /*
     new TheoremRule({
       name: 'rule_three',
       // III occurs in the string (at position rule_variant)? Replace III with U.
@@ -91,7 +91,6 @@ var seeker = new TheoremSeeker({
           produce(from, _k);
       }
     })
-*/
   ]
 });
 
